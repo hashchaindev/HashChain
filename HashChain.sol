@@ -44,8 +44,8 @@ contract HashChain{
             hashes[prevHashVal].signer == msg.sender && 
             hashes[nextHashVal].signer == msg.sender
         );
-        hashes[prevHashVal].nextHash = prevHashVal;
-        hashes[nextHashVal].previousHash = nextHashVal;
+        hashes[prevHashVal].nextHash = nextHashVal;
+        hashes[nextHashVal].previousHash = prevHashVal;
     }
     
     /**
